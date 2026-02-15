@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.dino_container{
+    width: 100%;
+    height: 100%;
+   background-color: rgb(8, 8, 8);
+   place-content: center;
+   display: block;
+  }
+
+  .bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+    0% { transform: translate(0,0) }
+    10% { transform: translate(-5%,-5%) }
+    20% { transform: translate(-10%,5%) }
+    30% { transform: translate(5%,-10%) }
+    40% { transform: translate(-5%,15%) }
+    50% { transform: translate(-10%,5%) }
+    60% { transform: translate(15%,0) }
+    70% { transform: translate(0,10%) }
+    80% { transform: translate(-15%,0) }
+    90% { transform: translate(10%,5%) }
+    100% { transform: translate(5%,0) }
+}
+
+  .header {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .header h2 {
+  left: 50%;
+  top: 20%;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .header h2:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2px #03a9f4;
+  }
+  
+  .header h2:nth-child(2) {
+    color: #03a9f4;
+    animation: animate 4s ease-in-out infinite;
+  }
+  
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+
+
+.dino_game {
+    width: 70%;
+    height: 450px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-row: 1;
+  grid-column: 1;
+    background-color:aliceblue;
+    background: url('./images/ezgif.com-animated-gif-maker.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+ 
+  #dino {
+    width: 130px;
+    height: 100px;
+    background-image: url('./images/clip-transparent-dinosaur-gif-30.gif');  
+    background-size: 130px 100px;
+    background-repeat: no-repeat;
+    position:relative;
+    top:330px; 
+  }
+
+  #cactus {
+    width: 60px;
+    height: 55px;
+    position: relative;
+    top: 270px;
+    left: -9999px;
+    background-image: url(./images/f05fc0ab6300df5de4a76ad86be47790.gif);
+    background-size: 60px 55px;
+    background-repeat: no-repeat;
+  } 
+
+ .buttons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+  .button{
+    padding: 0.6em 2em;
+    top: 6px;
+    margin: 20px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button:before{
+    content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  }
+
+  
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button.button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+  #Bird {
+    width: 130px;
+    height: 120px;
+    position: relative;
+    left: -9999px;
+    top: -150px;
+    background-image: url(./images/bird.gif);
+    background-size: 130px 120px;
+    background-repeat: no-repeat;
+  }
+
+  #NewCactus {
+    width: 60px;
+    height: 105px;
+    position: relative;
+    top: 170px;
+    left: -9999px;
+    background-image: url(./images/f05fc0ab6300df5de4a76ad86be47790.gif);
+    background-size: 60px 105px;
+    background-repeat: no-repeat;
+  }
+
+  @keyframes jump {
+    0% {
+      top: 330px;
+    }
+    
+    30% {
+      top: 230px;
+    }
+
+    50% {
+      top: 200px;
+    }
+    80% {
+      top: 270px;
+    }
+   
+    100% {
+      top: 330px;
+    }
+  }
+
+  .jump1 {
+    animation: jump1 0.65s linear;
+  }
+
+  @keyframes jump1 {
+    0% {
+      top: 330px;
+    }
+    
+    30% {
+      top: 210px;
+    }
+
+    50% {
+      top: 130px;
+    }
+    80% {
+      top: 230px;
+    }
+   
+    100% {
+      top: 330px;
+    }
+  }
+
+  .jump {
+    animation: jump 0.5s linear;
+  }
+
+  .popup {
+    cursor: pointer;
+    margin: auto;
+  }
+
+  .popup p1{
+    color: azure;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    margin: auto;
+  }
+
+  .popup .popuptext {
+    visibility: hidden;
+    width: 660px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    background-color: #555;
+    border-radius: 100px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+
+  .container {
+    visibility: hidden;
+    max-width: 100vw;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .container-inner {
+    background: #a4363e;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 5px 6px 0px -2px #620d15, -6px 5px 0px -2px #620d15,
+      0px -2px 0px 2px #ee9191, 0px 10px 0px 0px #610c14,
+      0px -10px 0px 1px #e66565, 0px 0px 180px 90px #0d2f66;
+    width: 940px;
+  }
+  
+  .content {
+    font-family: "Skranji", cursive;
+    background: radial-gradient(#fffbf3, #ffe19e);
+    padding: 24px;
+    box-sizing: border-box;
+    border-radius: 20px 18px 20px 18px;
+    box-shadow: 0px 0px 0px 6px #5e1e21, 0px 0px 8px 6px #84222b,
+      inset 0px 0px 15px 0px #614506, 6px 6px 1px 1px #e66565,
+      -6px 6px 1px 1px #e66565;
+    text-align: center;
+  
+    p {
+      font-size: 56px;
+      padding: 40px;
+      box-sizing: border-box;
+      color: #461417;
+    }
+  }
+  
+  .buttons1 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: normal;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+  
+    button {
+      padding: 20px;
+      flex: 1;
+      border-radius: 20px;
+      border: 2px solid #49181e;
+      font-family: "Skranji", cursive;
+      color: #fff;
+      font-size: 32px;
+      text-shadow: 1px 2px 3px #000000;
+      cursor: pointer;
+  
+      &#confirm {
+        background: linear-gradient(#ced869, #536d1b);
+        box-shadow: 0px 0px 0px 4px #7e1522, 0px 2px 0px 3px #e66565;
+        &:hover {
+        box-shadow: 0px 0px 0px 4px #7e1522, 0px 2px 0px 3px #e66565,
+          inset 2px 2px 10px 3px #4e6217;
+        } 
+      }
+    }
+  }
+
+  .show{
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+
+  @font-face{
+    font-family: Pixelated;
+    src: url(./images/font/slkscr.ttf);
+  }
+
+  #score{
+    font-family: Pixelated;
+    font-size: 25px;
+    text-align: center;
+  }

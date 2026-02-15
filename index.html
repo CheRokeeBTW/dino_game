@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>Dino</title>
+<link rel="stylesheet" type="text/css" href="./dino.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="icon" href="data:;base64,=">
+</head>
+<body>
+    <div class = "dino_container">
+      <div class ="container" id = "container1">
+        <div class="container-inner">
+          <div class="content">
+            <p>Do you want to try again?</p>
+          </div>
+          <div class="buttons1">
+            <button type="button" class id ="confirm">Confirm</button>
+          </div>
+        </div>
+      </div>
+       <div class = "bg"> </div>
+      <div class = "header">
+        <h2>Welcome to the DINO game</h2>
+        <h2>Welcome to the DINO game</h2>
+      </div>
+      <audio id = "myAudio1" src="./images/The Price is Right Losing Horn - Sound Effect (HD).mp3"></audio>
+      <audio id = "myAudio" src="./images/Chinese Rap 10 Minute Loop (No Female Voice).mp3" loop="true" preload="auto" autoplay="true"></audio>
+  <div class = "dino_game">
+    <p id = "score"> </p>
+<div id = "dino"></div>
+<div id = "cactus"></div>
+<div id = "NewCactus"></div>
+<div id = "Bird"></div>
+  </div>
+  <div class = "buttons">
+    <button class = "button" onclick="playAudio()" type="button">Play Audio</button>
+          <button class = "button" onclick="pauseAudio()" type="button">Pause Audio</button> 
+        </div>
+</div>
+</div>
+    </body>
+  <script src="dino_game.js"></script>
+</html>

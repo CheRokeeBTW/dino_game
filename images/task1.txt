@@ -1,0 +1,15 @@
+Array.prototype.myFilter = function (array){
+    let filtered = []
+    for(let i = 0; i < this.length; i ++){
+        if(array(this[i])){
+            filtered.push(this[i])
+        }
+    }
+    return filtered
+}
+
+console.log(array.myFilter(function (array){
+    if(array % 2 == 0){
+        return array
+    }
+}))
