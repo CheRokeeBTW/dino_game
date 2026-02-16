@@ -47,15 +47,24 @@
   .header {
     align-items: center;
     justify-content: center;
+    text-wrap: nowrap;
     width: 100%;
   }
   
   .header h2 {
-  left: 50%;
-  top: 20%;
+    left: 50%;
+    top: 20%;
     color: #fff;
     font-size: 50px;
     position: absolute;
+    transform: translate(-50%, -50%);
+  }
+
+  .header p{
+    color: wheat;
+    position: absolute;
+    left: 50%;
+    top: 26%;
     transform: translate(-50%, -50%);
   }
 
